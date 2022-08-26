@@ -7,7 +7,7 @@
     justify-content: center;
     border-radius: 50px;
     overflow: hidden;
-    box-shadow: 15px 15px 20px  #aca9a9;
+    box-shadow: 15px 20px 20px  #aca9a9;
     text-align: center;
         // flex-direction: column;
     // row-gap: 20px;
@@ -19,7 +19,8 @@
     color: rgb(234, 239, 239);
     background-color: #3790f5;
     padding: 30px;
-    
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:x-large;
 
   }
 
@@ -41,6 +42,7 @@ input {
     border-radius: 20px;
     outline: none;
     text-align: center;
+    font-size: medium;
   }
 
 

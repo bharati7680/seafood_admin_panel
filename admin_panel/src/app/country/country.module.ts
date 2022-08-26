@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddCountryComponent } from './components/add-country/add-country.component';
-import { CountryListComponent } from './components/country-list/country-list.component';
 
+import { CountryRoutingModule } from './country-routing.module';
 
 
 @NgModule({
-  declarations: [
-    AddCountryComponent,
-    CountryListComponent
-  ],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    CountryRoutingModule
   ]
 })
 export class CountryModule { }
