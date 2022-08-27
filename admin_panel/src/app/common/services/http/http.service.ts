@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http'
-import { throwError, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { environment } from '../environment';
 import { ApiMethod, AuthEndPoints } from '../consts';
@@ -11,7 +11,7 @@ import { ErrorService } from '../error/error.service';
 })
 export class HttpService {
 
-  methods: ApiMethod
+  //methods: ApiMethod
 
   constructor(
     private http: HttpClient,
@@ -26,38 +26,38 @@ export class HttpService {
       'Authorization': "token_asdfsdfa"
     });
 
-    console.log(`${environment.apiUrl}${api}`)
+    console.log(`${environment}${api}`)
 
-    let response;
+    let response: Observable<any>
     switch(method) {
       case ApiMethod.GET:
         response = this.http.get(`${environment.apiUrl}${api}`, { headers: headers, params: params })
-            .pipe(catchError((err) => this.handleError(err, this)));
+            .pipe(catchError(async (err) => this.handleError(err)));
         break;
       case ApiMethod.POST:
         response = this.http.post(`${environment.apiUrl}${api}`, data, { headers: headers, params: params })
-            .pipe(catchError((err) => this.handleError(err, this)));
+            .pipe(catchError(async (err) => this.handleError(err)));
         break;
       case ApiMethod.PUT:
       response = this.http.put(`${environment.apiUrl}${api}`, data, { headers: headers, params: params })
-          .pipe(catchError((err) => this.handleError(err, this)));
+          .pipe(catchError(async (err) => this.handleError(err)));
         break;
       case ApiMethod.DELETE:
       response = this.http.delete(`${environment.apiUrl}${api}`, params)
-          .pipe(catchError((err) => this.handleError(err, this)));
+          .pipe(catchError(async (err) => this.handleError(err)));
         break;
       default:
         break;
     }
-    return response
+    return response!
   }
 
-  handleError(error: HttpErrorResponse, self) {
+  handleError(error: HttpErrorResponse) {
     if(error.error instanceof ErrorEvent) {
       console.log('An error occurred:', error.error.message);
     } else {
       this._error.whichError(error.status, error.message);
-      return throwError({error: error.error.errors, status: error.status})
+      throw Error(error.message)
     }
   }
 }
