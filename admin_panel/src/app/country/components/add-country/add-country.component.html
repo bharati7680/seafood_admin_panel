@@ -1,4 +1,25 @@
-<div class="asdf">
+<div class="addcountry">
+  <p class="h5">Add Country</p>
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Country Name</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Country Code</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="d-grid col-md-4 mx-auto">
+      <button type="button" class="btn btn-primary btn-lg">Save</button>
+    </div>
+  </form>
+  
+</div>
+
+
+
+
+  <!-- <div class="asdf">
     <div class="addC">
         <button class="btn btn-primary" type="submit">Add Country</button>
     
@@ -15,6 +36,15 @@
                 <input type="text" placeholder="Code" class="form-control" id="validationDefault05" required />
               </div>
             </div>
+
+            <div class="col-md-4">
+              <div class="form-outline">
+                <ng-select [(ngModel)]="selectedCar">
+                  <ng-option *ngFor="let car of flagList" [value]="car.id">{{car.name}}</ng-option>
+               </ng-select>
+              </div>
+            </div>
+
             <div class="add col-12">
               <button class="btn btn-primary" type="submit">Save</button>
             </div>
@@ -22,4 +52,4 @@
     </div>
     
 </div>
-
+ -->

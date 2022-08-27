@@ -1,18 +1,6 @@
-
-  .toolbar img {
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
-  }
-
-  .toolbar #youtube-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-   
+      .toolbar{
+        margin-left: 100px;
+      }
     /* Responsive Styles */
     @media screen and (max-width: 767px) {
       .card-container > *:not(.circle-link) ,

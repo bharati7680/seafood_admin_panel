@@ -1,56 +1,83 @@
 .addcountry{
-    width: 500px;
-    height: 400px; 
+    width: 85%;
+    height: 85%; 
     display: flex;
     // justify-content: center;
-    flex-direction: row;
-    column-gap: 5px;
-    // padding-left: 60px;
-    align-items: center;
-    // margin: px;
+    // justify-content:space-between;
+    // flex-direction: row;
+    row-gap: 70px;
+    // padding: 50px;
+    // align-items: center;
+    margin: 60px 100px;
     // background-color: rgb(202, 202, 234);
     // border: 1px solid rgb(86, 86, 246);
     box-shadow: 5px 5px 10px rgb(166, 166, 238);
+    border: 1px solid rgb(146, 144, 144) ;
 }
 input{
-    // margin-left: 20px;
-    // margin-right: 60px;
-    width: 180px;
+    // margin-top: 20px;
+//     // margin-right: 60px;
+    width: 270px;
     height: 50px; 
-    display: flex;
-    align-content: space-between;
+//     display: flex;
+//     align-content: space-between;
     // justify-content:space-between;
 }
 
+label{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form{
+    // margin-top: 50px;
+    // margin-right: 100px;
+    padding-top: 150px;
+    justify-content:space-around;
+
+    // display: flex;
+    // flex-direction: row;
+    // column-gap: 5px;
+
+}
+
+p{
+ margin-top: 20px;
+ margin-left: 40px;
+ font-size: 25px;
+}
+
 button{
-    margin: 20px;
+    margin-bottom: 100px;
+    // margin-right: ;
+    // padding-top: 100px;
     width: 150px;
     height: 50px;    
 }
-.addC{
-    // margin-left: 325px;
-    display: flex;
-    justify-content:end;
-    // align-items: flex-end;
-    margin-bottom: 20px;
-    width: 500px;
-    // background-color:rgb(189, 189, 242);
-    box-shadow: 0px 5px 10px rgb(166, 166, 238);
-}
+// .addC{
+//     // margin-left: 325px;
+//     display: flex;
+//     justify-content:end;
+//     // align-items: flex-end;
+//     margin-bottom: 20px;
+//     width: 500px;
+//     // background-color:rgb(189, 189, 242);
+//     box-shadow: 0px 5px 10px rgb(166, 166, 238);
+// }
 
-.col-md-4{
-    margin: 35px;
-}
-.add{
-    // display: flex;
-    // justify-content:end;
-    margin-left: 150px;   
+// .col-md-4{
+//     margin: 35px;
+// }
+// .add{
+//     // display: flex;
+//     // justify-content:end;
+//     margin-left: 150px;   
 
-}
-.asdf{
-    background-color: rgb(238, 238, 241);
-    // border: 5px solid rgb(207, 207, 233);
-    box-shadow: 5px 5px 20px rgb(166, 166, 238);
+// }
+// .asdf{
+//     background-color: rgb(238, 238, 241);
+//     // border: 5px solid rgb(207, 207, 233);
+//     box-shadow: 5px 5px 20px rgb(166, 166, 238);
 
 
-}
+// }

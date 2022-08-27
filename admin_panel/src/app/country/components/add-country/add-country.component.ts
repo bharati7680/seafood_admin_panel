@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCountryComponent implements OnInit {
 
+  selectedCar?: number;
+
+    flagList = [
+        { id: 1, name: "Enable" },
+        { id: 0, name: 'Disable' }
+    ];
+
   constructor() { }
 
   ngOnInit(): void {

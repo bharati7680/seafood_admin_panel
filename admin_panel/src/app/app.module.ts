@@ -9,6 +9,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { AddCountryComponent } from './country/components/add-country/add-country.component';
 import { CountryListComponent } from './country/components/country-list/country-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
