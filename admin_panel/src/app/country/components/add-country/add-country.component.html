@@ -1,25 +1,42 @@
 <div class="addcountry">
   <p class="h5">Add Country</p>
-  <form class="row g-3">
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Country Name</label>
-      <input type="email" class="form-control" id="inputEmail4">
+  <form [formGroup]="addCountry" class="row g-5">
+    <div class="name">
+      <div class="col-md-3">
+        <label for="inputCountryName" class="form-label">Country Name</label>
+        <input class="dropdown-toggle" formControlName="countryName" type="email" class="form-control" id="inputEmail4"
+          placeholder="Country Name">
+      </div>
+      <div class="col-md-3">
+        <label for="inputCountryCode" class="form-label">Country Code</label>
+        <input type="password" formControlName="CountryCode" class="form-control" id="inputPassword4" placeholder="Country Code">
+      </div>
+      <div class="col-md-3 drop1">
+        <label for="">Status</label>
+        <div class="form-outline drop">
+          <ng-select formControlName="status" placeholder="--Select--" [(ngModel)]="selectedCar">
+            <ng-option *ngFor="let car of flagList" [value]="car.id">{{car.name}}</ng-option>
+          </ng-select>
+        </div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Country Code</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-    <div class="d-grid col-md-4 mx-auto">
+    <div class="col-md-2 mx-auto">
       <button type="button" class="btn btn-primary btn-lg">Save</button>
     </div>
   </form>
-  
+
 </div>
 
 
+<!-- <ng-select placeholder="--Select Country--">
+          <ng-option></ng-option>
+       </ng-select> -->
+<!-- <select name="countryName" class="form-control">
+          <option>--Select Country--</option>
+          <option></option>
+        </select> -->
 
-
-  <!-- <div class="asdf">
+<!-- <div class="asdf">
     <div class="addC">
         <button class="btn btn-primary" type="submit">Add Country</button>
     

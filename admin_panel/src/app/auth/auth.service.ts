@@ -10,14 +10,14 @@ export class AuthService {
 
   constructor(private httpservice: HttpService) { }
 
-  adminlogin(username: string, password: string) {
+  adminlogin(email: string, password: string) {
 
     const body = {
-      username: username,
+      email: email,
       password: password
     }
 
-    return this.httpservice.requestCall("/api/admin/adminlogin", ApiMethod.POST, body)
+    return this.httpservice.requestCall("/api/users/signin", ApiMethod.POST, body)
      .pipe(map(data => {
        return data
      }))

@@ -10,15 +10,18 @@ import { AddCountryComponent } from './country/components/add-country/add-countr
 import { CountryListComponent } from './country/components/country-list/country-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HttpClientModule } from '@angular/common/http';
+import { AddCityComponent } from './city/components/add-city/add-city.component';
+import { CityListComponent } from './city/components/city-list/city-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SidebarComponent,
     AdminLoginComponent,
     AddCountryComponent,
-    CountryListComponent
+    CountryListComponent,
+    AddCityComponent,
+    CityListComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    NgSelectModule
+    NgSelectModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+.header {
+
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #296aac;
+    color: white;
+    font-weight: 600;
+  }
+
+// .container1{
+//     display: flex;
+//     flex-direction: row;
+//     width: 100%;
+//     height: 100%;
+    // position: absolute;
+    // margin-top: 60px;
+    
+// }
+.sidebar{
+    background-color: rgb(28, 134, 226);
+    width: 350px;
+    
+}
+.content{
+    // background-color: hsl(240, 37%, 97%);
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+
+}

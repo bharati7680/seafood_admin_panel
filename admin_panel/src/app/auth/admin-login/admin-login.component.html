@@ -7,7 +7,7 @@
         <div class="card-body">
             <form [formGroup]="adminLogin">
                 <div>
-                    <input type="text" formControlName="username" class="form-control" placeholder="Username" />
+                    <input type="text" formControlName="email" class="form-control" placeholder="Email" />
                 </div>
                 <div>
                     <input type="password" formControlName="password" class="form-control" placeholder="Password" />
@@ -16,7 +16,7 @@
                     <a class="danger-alert" href="#">Forgot Password?</a>
                 </div>
                 <div>
-                    <button class="btn-primary justify-content-center">
+                    <button class="btn-primary justify-content-center" (click)="login()">
                         <span class="mr-1"></span>
                          Login
                     </button>

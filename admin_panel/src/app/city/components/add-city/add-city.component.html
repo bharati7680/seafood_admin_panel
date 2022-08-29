@@ -1,0 +1,80 @@
+<div class="addcountry">
+    <p class="h5">Add Country</p>
+    <form class="row g-5">
+      <div class="name">
+        <div class="col-md-3">
+          <label for="inputCountryName" class="form-label">Country Name</label>
+          <!-- <ng-select placeholder="--Select Country--">
+            <ng-option></ng-option>
+         </ng-select> -->
+          <!-- <select name="countryName" class="form-control">
+            <option>--Select Country--</option>
+            <option></option>
+          </select> -->
+          <input class="dropdown-toggle" type="email" class="form-control" id="inputEmail4" placeholder="Country Name">
+        </div>
+        <div class="col-md-3">
+          <label for="inputCountryCode" class="form-label">Country Code</label>
+          <!-- <ng-select placeholder="--Select Country Code--">
+            <ng-option></ng-option>
+         </ng-select> -->
+          <!-- <select name="countryName" class="form-control">
+            <option>--Select Country Code--</option>
+            <option></option>
+          </select> -->
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Country Code">
+        </div>
+        <div class="col-md-3 drop1">
+          <label for="">Status</label>
+          <div class="form-outline drop">
+            <ng-select placeholder="--Select--" [(ngModel)]="selectedCar">
+              <ng-option  *ngFor="let car of flagList" [value]="car.id">{{car.name}}</ng-option>
+           </ng-select>
+          </div>  
+      </div>
+      </div>
+          <div class="col-md-2 mx-auto">
+        <button type="button" class="btn btn-primary btn-lg">Save</button>
+      </div>
+    </form>
+    
+  </div>
+  
+  
+  
+  
+    <!-- <div class="asdf">
+      <div class="addC">
+          <button class="btn btn-primary" type="submit">Add Country</button>
+      
+      </div>
+      <div class="addcountry">
+          <form class="row g-3">
+              <div class="col-md-4">
+                <div class="form-outline">
+                  <input type="text" placeholder="Country Name" class="form-control" id="validationDefault03" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-outline">
+                  <input type="text" placeholder="Code" class="form-control" id="validationDefault05" required />
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <div class="form-outline">
+                  <ng-select [(ngModel)]="selectedCar">
+                    <ng-option *ngFor="let car of flagList" [value]="car.id">{{car.name}}</ng-option>
+                 </ng-select>
+                </div>
+              </div>
+  
+              <div class="add col-12">
+                <button class="btn btn-primary" type="submit">Save</button>
+              </div>
+            </form>
+      </div>
+      
+  </div>
+-->      
+

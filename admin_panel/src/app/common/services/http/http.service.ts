@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { environment } from '../environment';
+import { environment } from '../../../../environments/environment';
 import { ApiMethod, AuthEndPoints } from '../consts';
 import { ErrorService } from '../error/error.service';
 
@@ -26,24 +26,24 @@ export class HttpService {
       'Authorization': "token_asdfsdfa"
     });
 
-    console.log(`${environment}${api}`)
+    console.log(`${environment.API_URL}${api}`)
 
     let response: Observable<any>
     switch(method) {
       case ApiMethod.GET:
-        response = this.http.get(`${environment.apiUrl}${api}`, { headers: headers, params: params })
+        response = this.http.get(`${environment.API_URL}${api}`, { headers: headers, params: params })
             .pipe(catchError(async (err) => this.handleError(err)));
         break;
       case ApiMethod.POST:
-        response = this.http.post(`${environment.apiUrl}${api}`, data, { headers: headers, params: params })
+        response = this.http.post(`${environment.API_URL}${api}`, data, { headers: headers, params: params })
             .pipe(catchError(async (err) => this.handleError(err)));
         break;
       case ApiMethod.PUT:
-      response = this.http.put(`${environment.apiUrl}${api}`, data, { headers: headers, params: params })
+      response = this.http.put(`${environment.API_URL}${api}`, data, { headers: headers, params: params })
           .pipe(catchError(async (err) => this.handleError(err)));
         break;
       case ApiMethod.DELETE:
-      response = this.http.delete(`${environment.apiUrl}${api}`, params)
+      response = this.http.delete(`${environment.API_URL}${api}`, params)
           .pipe(catchError(async (err) => this.handleError(err)));
         break;
       default:
