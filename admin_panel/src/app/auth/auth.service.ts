@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
-import { ApiMethod } from '../common/services/consts';
-import { HttpService } from '../common/services/http/http.service';
+import { ApiMethod } from '../common/consts';
+import { HttpService } from '../common/http.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,4 +23,5 @@ export class AuthService {
        return data
      }))
   }
+
 }

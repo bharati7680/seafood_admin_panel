@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
-import { ApiMethod } from '../common/services/consts';
+import { ApiMethod } from '../common/consts';
+import { HttpService } from '../common/http.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CountryService {
-  httpservice: any;
+  
 
-  constructor() { }
+  constructor(private httpservice: HttpService) { }
 
   addCountry(countryName: string, countryCode: string, status: string) {
 

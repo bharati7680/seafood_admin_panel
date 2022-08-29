@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { environment } from '../../../../environments/environment';
-import { ApiMethod, AuthEndPoints } from '../consts';
-import { ErrorService } from '../error/error.service';
+import { environment } from '../../environments/environment';
+import { ApiMethod, AuthEndPoints } from './consts';
+import { ErrorService } from './error.service';
 
 @Injectable({
   providedIn: 'root'
